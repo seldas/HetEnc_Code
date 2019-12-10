@@ -2,17 +2,13 @@ import os
 from Scripts.SrcDeepNB import *
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-AE_ver = 'v3'
-if AE_ver is 'v1':
-	from Scripts.SrcAutoEncoder_V1 import * # 
-elif AE_ver is 'v2':
-	from Scripts.SrcAutoEncoder_V2 import * #		
-elif AE_ver is 'v3':
-	from Scripts.SrcAutoEncoder_V3 import * # V3 is used currently in the project.		
+AE_ver = 'V3'
+from Scripts.SrcAutoEncoder_V3 import * # V3 is used currently in the project.		
+
 
 # Load NeuroBlastoma (NB) dataset	
-curr_wd = './DeepNB/'
-data_format = "Raw"
+curr_wd = './Data/'
+data_format = "Norm"
 data_cache = MLP_data_loading(curr_wd, data_format)
 
 # Parameters for AE_models

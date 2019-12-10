@@ -4,7 +4,8 @@ import pandas as pd
 import os
 from sklearn.preprocessing import StandardScaler as Norm
 
-from .SrcAutoEncoder_V3 import * 
+AE_ver = 'V3'
+from Scripts.SrcAutoEncoder_V3 import * 
 
 
 def main(curr_wd = './Data/', data_format = 'Norm'):		
