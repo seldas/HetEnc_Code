@@ -242,23 +242,23 @@ def select_model(PLATFORM, AE_models, AE_ver):
 	# print(PLATFORM)
 	used_model = None
 	if PLATFORM is 'AG':
-		if AE_ver is 'v1':
+		if AE_ver is 'V1':
 			(model_A_1, model_A_2, model_B_1, model_B_2, model_C, model_D_1, model_D_2, model_E, model_F_1, model_F_2) = AE_models
 			used_model = (model_A_1, model_B_1, model_C, model_D_1, model_E, model_F_1)
-		elif AE_ver is 'v2':
+		elif AE_ver is 'V2':
 			(model_A_1, model_A_2, model_B_1, model_B_2, model_C_1, model_C_2) = AE_models			
 			used_model = (model_A_1, model_B_1, model_C_1)
-		elif AE_ver is 'v3':
+		elif AE_ver is 'V3':
 			(model_A_1, model_A_2, model_C, model_E) = AE_models
 			used_model = (model_A_1, model_C, model_E)
 	elif PLATFORM is 'NGS':
-		if AE_ver is 'v1':
+		if AE_ver is 'V1':
 			(model_A_1, model_A_2, model_B_1, model_B_2, model_C, model_D_1, model_D_2, model_E, model_F_1, model_F_2) = AE_models
 			used_model = (model_A_2, model_B_2, model_C, model_D_2, model_E, model_F_2)
-		elif AE_ver is 'v2':
+		elif AE_ver is 'V2':
 			(model_A_1, model_A_2, model_B_1, model_B_2, model_C_1, model_C_2) = AE_models			
 			used_model = (model_A_2, model_B_2, model_C_2)
-		elif AE_ver is 'v3':
+		elif AE_ver is 'V3':
 			(model_A_1, model_A_2, model_C, model_E) = AE_models
 			used_model = (model_A_2, model_C, model_E)
 	

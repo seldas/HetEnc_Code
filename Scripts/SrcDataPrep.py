@@ -4,9 +4,9 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 from sklearn.metrics import roc_auc_score, matthews_corrcoef, accuracy_score
 
 def OntHotConverter(y):
-	labelEncoder = LabelEncoder()
-	yInt = labelEncoder.fit_transform(y)
-	oneHotEncoder = OneHotEncoder(sparse=False)
+	# labelEncoder = LabelEncoder()
+	yInt = y #labelEncoder.fit_transform(y)
+	oneHotEncoder = OneHotEncoder(sparse=False, categories='auto')
 	yInt = yInt.reshape(len(yInt), 1)
 	yOneHot = oneHotEncoder.fit_transform(yInt)
 
